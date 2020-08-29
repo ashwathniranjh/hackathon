@@ -1,0 +1,22 @@
+.post{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.template-control{
+    height:300px;
+    width:500px;
+    margin: 30px;
+   padding:10px;
+   border: 2px solid black;
+}
+.template-control a{
+    text-decoration:none;
+    color: black;
+}
+.template-control img{
+    width: 100%;
+    overflow: hidden;
+}

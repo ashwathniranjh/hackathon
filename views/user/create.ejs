@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href = "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/create.css">
+
+    <!-- <link rel = "stylesheet" href = "/css/stylecreate.css"/>
+    <link rel = "stylesheet" href = "/css/styles2.css"> -->
+
+
+
+    <title>CMS</title>
+</head>
+<body>
+    <nav>
+    
+    <ul class="nav-links">
+        <li>
+            <a href = "/dashboard">Home</a>
+        </li>
+     
+            <a href = "/create">create</a>
+        </li>
+        <li>
+            <form action="/logout" method="post">
+                
+                <button type="submit">Logout</button>
+            </form>
+        </li>
+    </ul>
+
+    
+    </nav>
+   
+ 
+    <div id = "full-form">
+        <form class="login-form" action="/create/add-template" method="POST" enctype = "multipart/form-data">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input name="title" id="title" type = 'string'></input>
+            </div>
+            <div class= "form-control">
+                <label for = "banner">Banner</label>
+                <input type = "file" name = 'banner' id = "banner"></input>
+            </div>
+            <div class= "form-control">
+                <label for = "category">Category</label>
+                <select name="category" id="category">
+                   <%for (let category of categories) {%>
+                    <option value="<%=category._id%>"><%=category.title%></option>
+                    <%}%>
+                </select>
+            </div>
+           
+            <div class="form-control">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="7"></textarea>
+            </div> 
+            <!-- <div class= "form-control">
+                <label for = "images">Images</label>
+                <input type = "file" name = "images" id = "images" multiple></input>
+            </div> -->
+            <div class = "card-actions">
+                  <button class="btn" type="submit">Create Template</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

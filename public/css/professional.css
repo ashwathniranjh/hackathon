@@ -1,0 +1,12 @@
+.content{
+    margin: 20px;
+}
+.banner{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+}
+.banner img{
+    width:60%;
+
+}

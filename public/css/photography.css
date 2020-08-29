@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Nunito:wght@300;400&display=swap');
+.banner img{
+    width:70%;
+    
+}
+.banner{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+}
+.content{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content h1{
+     font-family: 'Josefin Sans', sans-serif;;
+}
+.content h1,p{
+    margin:20px 0px;
+}

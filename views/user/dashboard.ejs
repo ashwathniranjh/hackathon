@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title> 
+    <!-- <link rel = "stylesheet" href = "/css/styles2.css">
+    <link rel = "stylesheet" href = "/css/styledashboard.css"/> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+   
+</head>
+<body>
+    <nav>
+       
+            <ul class="nav-links">
+                <li>
+                    <a href = "/dashboard">Home</a>
+                </li>
+                <li>
+                    <a href = "/create">create</a>
+                </li>
+                <li>
+                    <form action="/logout" method="post">
+                        
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+       
+        </nav>
+        <div class="post">
+            <%if(templates.length === 0) { %>
+                <h1>No templates yet.</h1>
+                <% } %>
+
+            <% for(let template of templates){ %>
+                <div class="template-control">
+                    <a href="/template/<%=template._id%>">
+                        <h3><%= template.title%></h3>
+                    <img src="<%= template.images.images%>">
+                    </a>
+                </div>
+            <% } %>
+
+        </div>
+</body>
+</html>
